@@ -26,3 +26,8 @@ jobs:
           pylint boston/*.py
           pylint iris/*.py
         displayName: 'Run lint tests'
+
+      - script: |
+          pip install pytest pytest-azurepipelines
+          python -m pytest tests/
+        displayName: 'Test with pytest'
